@@ -1,3 +1,6 @@
-# gyrocube.github.io
+# Gyrocube
+---
 
-https://usagino.github.io/gyrocube.github.io/
+Gyrocubeはスマホで角度が測れるアプリです。
+
+https://usagino.github.io/gyrocube.github.io/dist/index.html

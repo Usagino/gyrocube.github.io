@@ -59,5 +59,13 @@ let timer = window.setInterval(() => {
     TweenMax.set('.cube p',{color:''});
   }
 
-
+  // if(
+  //   (30 >  alpha || alpha > -30) &&
+  //   (110 >  beta || beta > 70) &&
+  //   (110 > gamma || gamma > 70)
+  // ){
+  //   TweenMax.set('.stage',{rotation:-90});
+  // }else {
+  //   TweenMax.set('.stage',{rotation:0});
+  // }
 }, 30);
