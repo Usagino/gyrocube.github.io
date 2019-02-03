@@ -33,5 +33,10 @@ window.addEventListener("deviceorientation", (dat) => {
 let timer = window.setInterval(() => {
   console.log(beta,gamma);
   $(".front").html(`<p>上下: ${Math.floor(beta)}</p>`);
-  TweenMax.to('.cube',0.01,{rotationX:beta});
+  TweenMax.set('.cube',{
+    rotationX:beta,
+    rotationY:gamma,
+  });
+
+
 }, 33);
