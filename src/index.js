@@ -31,6 +31,9 @@ window.addEventListener("deviceorientation", (dat) => {
 
 // 指定時間ごとに繰り返し実行される setInterval(実行する内容, 間隔[ms]) タイマーを設定
 let timer = window.setInterval(() => {
-
   console.log(beta,gamma);
+  $(".front").html(`
+        <p>上下: ${Math.floor(beta)}</p>
+        <p>左右: ${Math.floor(gamma)}</p>
+    `);
 }, 33);
