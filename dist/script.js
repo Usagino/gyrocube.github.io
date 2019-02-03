@@ -164,5 +164,5 @@ i.e._gsDefine("easing.Back",["easing.Ease"],function(){var t,e,n,r,o=i.e.GreenSo
  *
  * @author: Jack Doyle, jack@greensock.com
  **/
-var F=n(3),H=n.n(F),B=n(2),z=n.n(B),q=n(5);window.location.href.match(".+/(.+?).[a-z]+([?#;].*)?$")[1],new TimelineMax;H.a.use(z.a),new H.a({el:"#contents",components:{carousel:z.a.Carousel,slide:z.a.Slide}});var V=0,W=0;window.addEventListener("deviceorientation",function(t){V=t.beta,W=t.gamma});window.setInterval(function(){console.log(V,W),q(".front").html("<p>上下: ".concat(Math.floor(V),"</p>")),I.set(".cube",{rotationX:-1*V,rotationY:-1*W})},33)}]);
+var F=n(3),H=n.n(F),B=n(2),z=n.n(B),q=n(5);window.location.href.match(".+/(.+?).[a-z]+([?#;].*)?$")[1],new TimelineMax;H.a.use(z.a),new H.a({el:"#contents",components:{carousel:z.a.Carousel,slide:z.a.Slide}});var V=0,W=0;window.addEventListener("deviceorientation",function(t){V=t.beta,W=t.gamma});var X=function(t,e){I.set(".cube",{rotationX:t,rotationY:e})};window.setInterval(function(){console.log(V,W),q(".front").html("<p>上下: ".concat(Math.floor(V),"</p>")),V>0?(console.log("０より下"),X(V<50?V:50,W)):V<0&&(console.log("０より下"),X(V>-50?V:-50,W))},33)}]);
 //# sourceMappingURL=script.js.map

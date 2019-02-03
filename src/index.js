@@ -29,14 +29,25 @@ window.addEventListener("deviceorientation", (dat) => {
 
 });
 
+const cube_move = (beta,gamma) =>{
+  TweenMax.set('.cube',{
+    rotationX:beta,
+    rotationY:gamma,
+  });
+}
+
 // 指定時間ごとに繰り返し実行される setInterval(実行する内容, 間隔[ms]) タイマーを設定
 let timer = window.setInterval(() => {
   console.log(beta,gamma);
   $(".front").html(`<p>上下: ${Math.floor(beta)}</p>`);
-  TweenMax.set('.cube',{
-    rotationX:beta * -1,
-    rotationY:gamma * -1,
-  });
 
 
+
+  if (beta > 0) {
+    console.log("０より下");
+    beta < 50 ? cube_move(beta,gamma) : cube_move(50,gamma);
+  }else if (beta < 0) {
+    console.log("０より下");
+    beta > -50 ? cube_move(beta,gamma) : cube_move(-50,gamma);
+  }
 }, 33);
