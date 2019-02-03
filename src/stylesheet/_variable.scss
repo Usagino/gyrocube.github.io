@@ -1,0 +1,160 @@
+$white: #ffffff;
+$gray: #d6d6d6;
+$black:#080808;
+$green: #21aa4b;
+$twitter: #55acee;
+$instagram: #D93177;
+$youtube: #cd201f;
+$wantedly:#21bddb;
+$hover_color: #6e6e6e;
+$link_color: $black;
+$special_color:rgba(#cf0125, 0.65);
+
+$box_all_smartphone: 420px;
+$box_all_tablet: 600px;
+$box_all_desktop: 1000px;
+
+$smartphone: "only screen and (min-width : 320px) and (max-width : 480px)";
+$tablet: "only screen (min-width : 480px) and (max-width : 1024px)";
+
+@mixin font_big {
+  font-size: 32px;
+}
+@mixin font_medium {
+  font-size: 24px;
+}
+@mixin font_small {
+  font-size: 16px;
+}
+@mixin link_color {
+  color: $link_color;
+  &:hover {
+    color: $hover_color;
+  }
+}
+
+@mixin box_all($max-width) {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $max-width;
+}
+
+// cssgridLayout
+@mixin IEsupport_margin($any,$IEgap){
+  @media all and (-ms-high-contrast: none){
+    margin-#{$any}:$IEgap
+  }
+}
+
+@mixin display-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin middle{
+  top: 0;bottom: 0;
+  left: 0;right: 0;
+  margin: auto;
+}
+@mixin btn-anime($bg_color){
+  .btn{
+    font-weight: 800;
+    width: 160px;
+    font-size: 16px;
+    display: inline;
+    padding: 8px 24px;
+    border-radius: 32px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px $black;
+    transition: 200ms ease 390ms;
+    .text{
+      position: relative;
+      transition: 200ms ease 200ms;
+    }
+    .bg{
+      background-color: $bg_color;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width:  100%;
+      height: 110%;
+      transform: translateX(110%) skewX(40deg);
+      transition: 300ms ease-in-out 200ms;
+    }
+    &:hover {
+      border: solid 1px $bg_color;
+
+      .bg{
+        transform: translateX(0%);
+      }
+      .text{
+        color: $white;
+
+      }
+    }
+  }
+}
+html {
+  overflow-x: hidden;
+}
+$scale: scaleX(2);
+div,
+span {
+  content: "";
+}
+img {
+  pointer-events: none;
+}
+
+a,
+h1,
+h2,
+h3,
+li,
+p,
+input {
+  color: $white;
+  color: $black;
+
+  letter-spacing: 0.1em;
+}
+
+@mixin public_circle{
+  .circle{
+    width: 200px;height: 200px;
+    position: fixed;
+    z-index: -999;
+    top: 0;left: 0;
+    right: 0;bottom: 0;
+    margin: auto;
+    .circle-A{
+      width: 100%;height: 100%;
+      border-radius: 40% 40% 50% 40%/30% 50% 50%;
+      background: #ffe5e4;
+      animation: rotate 8s linear 0s infinite normal;
+    }
+    .circle-B{
+      background: white;
+      width: 80%;height: 80%;
+      border-radius: 40% 60% 50% 40%/30% 50% 50%;
+      animation: rotate 5s linear 0s infinite normal;
+    }
+  }
+}
+@mixin text_line{
+  text-align: justify;
+  -webkit-font-feature-settings : "palt";
+  font-feature-settings : "palt";
+}
+@mixin sticky($top){
+  position: -webkit-sticky;
+  position: sticky;
+  top:$top;
+}

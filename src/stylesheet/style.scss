@@ -1,0 +1,72 @@
+@import "_variable.scss";
+@import "_reset.scss";
+@import "_responsive.scss";
+
+#contents{
+  height: 100vh;
+  width: 100vw;
+  @include display-center;
+  .stage {
+    position: relative;
+    -webkit-perspective: 500;
+
+    .cube {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto;
+      -webkit-transform-style:preserve-3d;
+      -webkit-transition:all 1s;
+      &:hover{
+        -webkit-transform: rotateX(180deg) rotateY(180deg);
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #999;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 198px;
+        position: absolute;
+        background-color: rgba(255,255,255,.7);
+      }
+
+      .front {
+        top: 0;
+        left: 0;
+        -webkit-transform: translateZ(100px);
+      }
+
+      .back {
+        top: 0;
+        left: 0;
+        -webkit-transform: translateZ(-100px);
+      }
+
+      .left {
+        top: 0;
+        left: 100px;
+        -webkit-transform: rotateY(90deg);
+      }
+
+      .right {
+        top: 0;
+        right: 100px;
+        -webkit-transform: rotateY(-90deg);
+      }
+
+      .top {
+        top: 100px;
+        left: 0;
+        -webkit-transform: rotateX(90deg);
+      }
+
+      .bottom {
+        bottom: 100px;
+        left: 0;
+        -webkit-transform: rotateX(-90deg);
+      }
+    }
+  }
+}
