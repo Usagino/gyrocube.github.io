@@ -1,0 +1,119 @@
+@charset "UTF-8";
+html {
+  overflow-x: hidden; }
+
+div,
+span {
+  content: ""; }
+
+img {
+  pointer-events: none; }
+
+a,
+h1,
+h2,
+h3,
+li,
+p,
+input {
+  color: #ffffff;
+  color: #080808;
+  letter-spacing: 0.1em; }
+
+body, div, dl, dt, dd, p, ul, ol, li, form, textarea, input, table, th, tr, td, h1, h2, h3, h4, h5, blockquote, figure {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+body {
+  width: 100%;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: Arial, "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  position: relative;
+  overflow-x: hidden; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+h1, h2, h3, h4, h5, th {
+  font-weight: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol, li {
+  list-style: none; }
+
+a {
+  cursor: pointer;
+  display: block;
+  text-decoration: none; }
+
+img {
+  border: 0;
+  vertical-align: bottom; }
+
+input, select {
+  vertical-align: middle; }
+
+/* clearfix */
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+#contents {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #contents .stage {
+    position: relative;
+    -webkit-perspective: 500; }
+    #contents .stage .cube {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: all 1s; }
+      #contents .stage .cube:hover {
+        -webkit-transform: rotateX(180deg) rotateY(180deg); }
+      #contents .stage .cube div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #999;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 198px;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.7); }
+      #contents .stage .cube .front {
+        top: 0;
+        left: 0;
+        -webkit-transform: translateZ(100px); }
+      #contents .stage .cube .back {
+        top: 0;
+        left: 0;
+        -webkit-transform: translateZ(-100px); }
+      #contents .stage .cube .left {
+        top: 0;
+        left: 100px;
+        -webkit-transform: rotateY(90deg); }
+      #contents .stage .cube .right {
+        top: 0;
+        right: 100px;
+        -webkit-transform: rotateY(-90deg); }
+      #contents .stage .cube .top {
+        top: 100px;
+        left: 0;
+        -webkit-transform: rotateX(90deg); }
+      #contents .stage .cube .bottom {
+        bottom: 100px;
+        left: 0;
+        -webkit-transform: rotateX(-90deg); }
