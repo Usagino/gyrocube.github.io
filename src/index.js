@@ -38,16 +38,20 @@ const cube_move = (beta,gamma) =>{
 
 // 指定時間ごとに繰り返し実行される setInterval(実行する内容, 間隔[ms]) タイマーを設定
 let timer = window.setInterval(() => {
-  console.log(beta,gamma);
-  $(".front").html(`<p>上下: ${Math.floor(beta)}</p>`);
 
-
+  $(".front").html(`<p>${Math.floor(beta)}°</p>`);
 
   if (beta > 0) {
-    console.log("０より下");
-    beta < 50 ? cube_move(beta,gamma) : cube_move(50,gamma);
+    beta < 50 ? cube_move(beta,0) : cube_move(50,0);
   }else if (beta < 0) {
-    console.log("０より下");
-    beta > -50 ? cube_move(beta,gamma) : cube_move(-50,gamma);
+    beta > -50 ? cube_move(beta,0) : cube_move(-50,0);
   }
-}, 33);
+
+  if ((beta >= 90 && beta < 91) || (beta < -89 && beta >= -90) ) {
+    TweenMax.set('#contents',{background:"#19cfff"});
+    TweenMax.set('.cube div',{borderColor:"#ffffff"});
+  }else {
+    TweenMax.set('#contents',{background:""});
+    TweenMax.set('.cube div',{borderColor:""});
+  }
+}, 30);

@@ -92,7 +92,7 @@ input, select {
         text-align: center;
         line-height: 198px;
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.7); }
+        background-color: rgba(255, 255, 255, 0.1); }
       #contents .stage .cube .front {
         top: 0;
         left: 0;
