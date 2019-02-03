@@ -83,7 +83,7 @@ input, select {
       -webkit-transform-style: preserve-3d;
       -webkit-transition: all 1s; }
       #contents .stage .cube:hover {
-        -webkit-transform: rotateX(180deg) rotateY(180deg); }
+        -webkit-transform: rotateY(180deg); }
       #contents .stage .cube div {
         width: 200px;
         height: 200px;
