@@ -34,8 +34,8 @@ let timer = window.setInterval(() => {
   console.log(beta,gamma);
   $(".front").html(`<p>上下: ${Math.floor(beta)}</p>`);
   TweenMax.set('.cube',{
-    rotationX:beta,
-    rotationY:gamma,
+    rotationX:beta * -1,
+    rotationY:gamma * -1,
   });
 
 
